@@ -19,6 +19,11 @@ int main () {
     cout << "Masukan Jumlah Mahasiswa (1-5) : ";
     cin >> jumlh;
 
+    if (jumlh < 1 || jumlh > 5) {
+        cout << "Jumlah mahasiswa harus antara 1 sampai 5!" << endl;
+        return 1;
+    }
+
     mahasiswa* mhs = new mahasiswa[jumlh];
 
     for (int a = 0; a < jumlh; a++) {
