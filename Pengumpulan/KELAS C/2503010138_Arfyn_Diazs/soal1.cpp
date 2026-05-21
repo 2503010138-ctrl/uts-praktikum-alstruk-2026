@@ -19,7 +19,7 @@ int main () {
     cout << "Masukan Jumlah Mahasiswa (1-5) : ";
     cin >> jumlh;
 
-    mahasiswa mhs[jumlh];
+    mahasiswa* mhs = new mahasiswa[jumlh];
 
     for (int a = 0; a < jumlh; a++) {
 
@@ -109,6 +109,8 @@ int main () {
     if (ditemukan == false) {
         cout << "Tidak ada mahasiswa pada semester tersebut." << endl;
     }
+
+    delete[] mhs;
 
     return 0;
 }
